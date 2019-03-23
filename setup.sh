@@ -17,7 +17,7 @@ dbconfig-common	dbconfig-common/password-confirm password $DEFAULTPASS
 dbconfig-common	dbconfig-common/app-password-confirm password $DEFAULTPASS
 phpmyadmin		phpmyadmin/reconfigure-webserver multiselect apache2
 phpmyadmin		phpmyadmin/dbconfig-install boolean true
-phpmyadmin      phpmyadmin/app-password-confirm password $DEFAULTPASS 
+phpmyadmin      phpmyadmin/app-password-confirm password $DEFAULTPASS
 phpmyadmin      phpmyadmin/mysql/admin-pass     password $DEFAULTPASS
 phpmyadmin      phpmyadmin/password-confirm     password $DEFAULTPASS
 phpmyadmin      phpmyadmin/setup-password       password $DEFAULTPASS
@@ -54,10 +54,25 @@ echo "--- Baixando e Instalando Composer ---"
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
-echo "--- Instalando Banco NoSQL -> Redis <- ---" 
+echo "--- Instalando Banco NoSQL -> Redis <- ---"
 sudo apt-get install redis-server --assume-yes
 sudo apt-get install php7.1-redis --assume-yes
 
-# Instale apartir daqui o que você desejar 
+# Instale apartir daqui o que você desejar
 
+echo "--- Baixando e Instalando o Node ---"
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs --assume-yes --force-yes
+
+echo "--- Baixando e Instalando o PhpUnit ---"
+wget https://phar.phpunit.de/phpunit-8.0.phar
+sudo chmod +x phpunit-8.0.phar --assume-yes --force-yes
+sudo mv phpunit-8.0.phar /usr/local/bin/phpunit
+phpunit --version
+
+echo "--- Baixando e Instalando o Xdebug ---"
+git clone https://github.com/xdebug/xdebug.git /tmp/xdebug
+cd /tmp/xdebug/
+sudo ./rebuild.sh --assume-yes --force-yes
+echo 'Adicione no arquivo php.ini a seguinte linha: zend_extension="xdebug.so"'
 echo "[OK] --- Ambiente de desenvolvimento concluido ---"
