@@ -1,4 +1,4 @@
-Vagrant-Setup [ EspecializaTI]
+Vagrant-Setup [ Luis Felipe && EspecializaTI ]
 ===========
 
 Servidor LAMP (Linux, Apache, MySQL, PHP)
@@ -10,15 +10,18 @@ Configuração do Vagrant (com provisionamento em Shell Script) para criar uma m
 - PHP 7.1
 - MySQL 5.5
 - Git
-- PhpMyAdmin 
+- PhpMyAdmin
 - Composer
 - cURL
 - Vim
 - Redis
+- Node e NPM
+- PhpUnit
+- Xdebug
 (Para mais detalhes consulte arquivo setup.sh)
 
 
-Você vai precisar: 
+Você vai precisar:
 ==============
 
 - Virtualbox - https://www.virtualbox.org/
@@ -41,18 +44,18 @@ A instalação inicial pode ser feita de duas formas, sendo:
 
 * Clone esse repositório para sua máquina:
 
-- git clone https://github.com/especializati/vagrant-setup-php.git ( Execute o comando no seu Prompt/Terminal )
+- git clone https://github.com/philipsilv/vagrant-setup-php.git ( Execute o comando no seu Prompt/Terminal )
 
 * Ainda no Prompt de comando/Terminal Entre no diretório vagrant-setup-php  ( Ou o que você definir na hora da clonagem )
 
 * Inicie a máquina virtual com o comando:
 
-- vagrant up 
+- vagrant up
 
 
 
 
-2º -> Caso não tenha o Git instalado em sua máquina, acesse https://github.com/especializati/vagrant-setup-php baixe o arquivo do projeto no formato .zip e descompacte-o onde desejar.
+2º -> Caso não tenha o Git instalado em sua máquina, acesse https://github.com/philipsilv/vagrant-setup-php baixe o arquivo do projeto no formato .zip e descompacte-o onde desejar.
 
 * Abra seu Prompt/Terminal , acesse o diretorio que acabou de descompactar e rode o comando:
 
