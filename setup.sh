@@ -70,9 +70,15 @@ sudo chmod +x phpunit-8.0.phar --assume-yes --force-yes
 sudo mv phpunit-8.0.phar /usr/local/bin/phpunit
 phpunit --version
 
+echo "--- Baixando e Instalando o deployer ---"
+curl -LO https://deployer.org/deployer.phar
+sudo mv deployer.phar /usr/local/bin/dep
+sudo chmod +x /usr/local/bin/dep
+
 echo "--- Baixando e Instalando o Xdebug ---"
 git clone https://github.com/xdebug/xdebug.git /tmp/xdebug
 cd /tmp/xdebug/
 sudo ./rebuild.sh --assume-yes --force-yes
 echo 'Adicione no arquivo php.ini a seguinte linha: zend_extension="xdebug.so"'
+
 echo "[OK] --- Ambiente de desenvolvimento concluido ---"
