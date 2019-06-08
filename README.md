@@ -19,10 +19,7 @@ Configuração do Vagrant (com provisionamento em Shell Script) para criar uma m
 - PhpUnit
 - Xdebug,
 - Deployer
-<<<<<<< HEAD
 
-=======
->>>>>>> f5218b004e293a9a98fc78dd9e344fa3d9ced07d
 (Para mais detalhes consulte arquivo setup.sh)
 
 
