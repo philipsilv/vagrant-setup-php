@@ -17,7 +17,9 @@ Configuração do Vagrant (com provisionamento em Shell Script) para criar uma m
 - Redis
 - Node e NPM
 - PhpUnit
-- Xdebug
+- Xdebug,
+- Deployer
+
 (Para mais detalhes consulte arquivo setup.sh)
 
 
