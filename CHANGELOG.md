@@ -4,6 +4,27 @@ Todas as alterações significativas desse repositório serão documentadas nest
 
 ## [Unreleased]
 
+## [2.4.0] - 20/08/2017
+### Adicionado
+- Suporte ao Deployer
+
+### Alterações
+- Atualização na documentação
+
+### Descontinuado
+- Nada
+
+### Correções
+- Nada
+
+### Exclusões
+- Nada
+
+### Segurança
+- Nada
+
+-----------------------
+
 ## [2.3.0] - 20/08/2017
 ### Adicionado
 - Suporte ao Node/NPM, PhpUnit e Xdebug
