@@ -4,6 +4,27 @@ Todas as alterações significativas desse repositório serão documentadas nest
 
 ## [Unreleased]
 
+## [2.5.0] - 25/12/2019
+### Adicionado
+- Suporte ao php7.4 e postgresql server
+
+### Alterações
+- Atualização na documentação
+
+### Descontinuado
+- 
+
+### Correções
+- Nada
+
+### Exclusões
+- mysql
+
+### Segurança
+- Nada
+
+-----------------------
+
 ## [2.4.0] - 20/08/2017
 ### Adicionado
 - Suporte ao Deployer

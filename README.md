@@ -1,16 +1,16 @@
 Vagrant-Setup [ Luis Felipe && EspecializaTI ]
 ===========
 
-Servidor LAMP (Linux, Apache, MySQL, PHP)
+Servidor Web (Linux, Apache, PostgreSql, PHP)
 
-Configuração do Vagrant (com provisionamento em Shell Script) para criar uma máquina virtual (Ubuntu Server 14.04 64 Bits) de desenvolvimento em PHP.
+Configuração do Vagrant (com provisionamento em Shell Script) para criar uma máquina virtual (Ubuntu Server 16.04 64 Bits) de desenvolvimento em PHP.
 
 ### Pacotes Inclusos:
 
-- PHP 7.1
-- MySQL 5.5
+- PHP 7.4
+- PostgreSql 11
+- PgAdmin4
 - Git
-- PhpMyAdmin
 - Composer
 - cURL
 - Vim
@@ -68,9 +68,12 @@ A instalação inicial pode ser feita de duas formas, sendo:
 
 Após este comando 'vagrant up', o Vagrant ficará responsavel por baixar o sistema operacional ( neste caso Ubuntu Server 64 ), configurar a máquina virtual no VirtualBox e posteriormente baixar, instalar e configurar todos os pacotes do script 'setup.sh' (Sim! A primeira vez realmente é um pouco mais demorado).
 
-Quando tudo estiver pronto, um servidor web estará disponível no endereço http://localhost:8080, e a instalação do PHPMyAdmin está em http://localhost:8080/phpmyadmin, para acessar utilize:
+Quando tudo estiver pronto, um servidor web estará disponível no endereço http://localhost:8080.
 
-- Login: root
+
+Clique [aqui](./php7-apache/phppgadmin.md) para configurar  o pgadmin. Após terminar a configuração acesse o endereço http://localhost:8080/phppgadmin. para acessar utilize:
+
+- Login: vagrant
 - Senha: vagrant
 
 obs:(A senha padrão para todos os serviços é vagrant).
