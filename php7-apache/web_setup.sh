@@ -16,11 +16,12 @@ sudo apt-get update
 
 echo "--- Instalando PHP, Apache e alguns modulos ---"
 
-sudo apt-get install php7.3 php7.3-common --assume-yes --force-yes
+sudo apt-get install php7.3 php-dev php7.3-common --assume-yes --force-yes
 sudo apt-get install php7.3-cli libapache2-mod-php7.3 php7.3-mysql php7.3-pgsql php7.3-curl php-memcached php7.3-dev php7.3-mcrypt php7.3-sqlite3 php7.3-mbstring php*-mysql  php-gd php-xml php-mbstring  zip unzip --assume-yes --force-yes
 
 echo "--- Habilitando o PHP 7 ---"
 sudo a2dismod php5
+sudo a2dismod php7.*
 sudo a2enmod php7.3
 
 echo "--- Habilitando mod-rewrite do Apache ---"
@@ -43,8 +44,8 @@ sudo apt-get install -y nodejs --assume-yes --force-yes
 
 echo "--- Baixando e Instalando o PhpUnit ---"
 wget https://phar.phpunit.de/phpunit-8.0.phar
-sudo chmod +x phpunit-8.0.phar --assume-yes --force-yes
 sudo mv phpunit-8.0.phar /usr/local/bin/phpunit
+sudo chmod +x /usr/local/bin/phpunit
 phpunit --version
 
 echo "--- Baixando e Instalando o deployer ---"
