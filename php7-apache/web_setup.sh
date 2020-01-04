@@ -16,13 +16,13 @@ sudo apt-get update
 
 echo "--- Instalando PHP, Apache e alguns modulos ---"
 
-sudo apt-get install php7.3 php-dev php7.3-common --assume-yes --force-yes
-sudo apt-get install php7.3-cli libapache2-mod-php7.3 php7.3-mysql php7.3-pgsql php7.3-curl php-memcached php7.3-dev php7.3-mcrypt php7.3-sqlite3 php7.3-mbstring php*-mysql  php-gd php-xml php-mbstring  zip unzip --assume-yes --force-yes
+sudo apt-get install php7.4 php7.4-dev php7.4-common --assume-yes --force-yes
+sudo apt-get install php7.4-cli libapache2-mod-php7.4 php7.4-mysql php7.4-pgsql php7.4-curl php-memcached php7.4-mcrypt php7.4-sqlite3 php7.4-mbstring php7.4-gd php7.4-xml zip unzip --assume-yes --force-yes
 
 echo "--- Habilitando o PHP 7 ---"
-sudo a2dismod php5
-sudo a2dismod php7.*
-sudo a2enmod php7.3
+sudo a2dismod php7.0
+sudo a2enmod php7.4
+
 
 echo "--- Habilitando mod-rewrite do Apache ---"
 sudo a2enmod rewrite

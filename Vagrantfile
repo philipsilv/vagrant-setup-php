@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 80, host: 8080
   config.vm.synced_folder "www", "/var/www/html/", owner: "www-data", group: "www-data", mount_options: ['dmode=777','fmode=666']
   #compartilha os arquivos de configuração de ambiente
-  config.vm.synced_folder "./php7-apache/conf.d", "/etc/php/7.3/apache2/conf.d"
+  config.vm.synced_folder "./php7-apache/conf.d", "/etc/php/7.4/apache2/conf.d"
   config.vm.synced_folder "./etc", "/vagrant"
   #setup
   config.vm.provision :shell, path: "./php7-apache/db_setup.sh"
